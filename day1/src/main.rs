@@ -1,10 +1,10 @@
 use std::fs;
 
 fn main() {
-    let valid_digit_words = vec!["zero","one","two","three","four","five","six","seven","eight","nine"];
+    let valid_digit_words = ["zero","one","two","three","four","five","six","seven","eight","nine"];
 
     let file_contents = fs::read_to_string("./input").expect("File does not exist");
-    let file_lines = file_contents.split("\n");
+    let file_lines = file_contents.lines();
 
     let mut sum = 0;
     for line in file_lines {
